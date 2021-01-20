@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block body %}
+        <div class="middle_buttons">
+            <h1><span style="color: white; margin-left: 32%; margin-right: 30%;">Register</span></h1>
+            <form action="/register", method="post">
+                <div class="name_login">
+                    <input autocomplete="off" autofocus name="name" placeholder="Name" type="text" required>
+                </div>
+                <div class="surname_login">
+                   <input autocomplete="off" autofocus name="password" placeholder="Password" type="text" required>
+                </div>
+                <div class="select_type">
+                    <select name="type">
+                        <option disabled selected value="">type of user</option>
+                        {% for type in types%}
+                        <option value={{type}}>{{type}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="button_register">
+                    <input type="submit" name="register" value="register">
+                </div>
+            </form>
+            <div class="button_login">
+                <!--<form action="/login", method="post">
+                    <input type="submit" name="back" value="back">
+                </form>-->
+                <a href="{{url_for('index')}}"><button type="button" >back</button></a>
+            </div>
+        </div>
+{% endblock %}

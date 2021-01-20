@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+        {{message}}
+        <div class="middle_buttons">
+                <form action="/login", method="get">
+                        <input type="submit" name ="back_login"  value="login">
+                </form>
+        </div>
+{% endblock %}

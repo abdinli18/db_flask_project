@@ -1,0 +1,137 @@
+.first_buttons input[type="submit"]{
+  float: right;
+  display: block;
+  padding: 8px;
+  border: none;
+  background-color:dodgerblue;
+  margin-right: 10px;
+  border-radius: 8px;
+  color: white;
+}
+
+.first_buttons{
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #dddddd;  
+}
+
+.my_button{
+  float: right;
+  display: block;
+  padding: 8px;
+  border: none;
+  background-color:dodgerblue;
+  margin-right: 10px;
+  border-radius: 8px;
+  color: white;
+}
+
+
+
+.middle_buttons{
+  background-color:#3090C7;
+  margin-left: 37%;
+  margin-right: 37%;
+  margin-top: 120px;
+  vertical-align: middle;
+  border: 5px;
+  padding: 20px;
+  border-radius: 0 10% 0 10%;
+}
+
+.name_login{
+  margin-top: 10px;
+  /*margin-left: 70px;*/
+  margin-right: 50px;
+}
+
+.surname_login{
+  margin-top: 10px;
+  /*margin-left: 70px;*/
+  margin-right: 50px;
+}
+
+.button_login input[type="submit"]{
+  /*margin-right: 50px;*/
+  background-color: #C24641;
+  /*margin-right: 50px;
+  margin-left: 10px;*/
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  padding: 10px 153px;/*//////////////////*/
+  display: block;
+
+  border: none;
+  color: white;
+  outline: none;
+  text-align: center;
+}
+
+.button_sign_up {
+  /*margin-right: 50px;*/
+  background-color: #3090C7;
+  /*margin-right: 50px;
+  margin-left: 10px;*/
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
+  border: none;
+  color: white;
+  outline: none;
+  text-align: center;  
+}
+
+.button_register input[type="submit"]{
+  background-color: #C24641;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 145px;/*//////////////////*/
+  display: block;
+  border: none;
+  color: white;
+  outline: none;
+  text-align: center;  
+}
+
+
+input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 10px 22px 10px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+h1{
+  color: white;
+}
+
+select{
+  border: 0px;
+  outline: 0px;
+  padding: 10px 120px;
+  background-color:#f1f1f1;
+}
+
+.select_type{
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  outline: none;
+  display: block;
+  border: none;
+  background: #f1f1f1;
+}
+

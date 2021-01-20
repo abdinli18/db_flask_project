@@ -1,0 +1,52 @@
+{% extends "login_layout.html" %}
+
+
+{% block content %}
+        <!--<h1>Log in</h1>-->
+        
+    <div class="first_buttons">
+            <!--<form action="/login", method="">
+                <input type="submit" name ="sign_in"  value="sign in">
+            </form>
+
+            <form action="/register", method="post">
+                <input type="submit" name ="register" value="sign up">
+            </form>-->
+            <span style="float: left;margin-left: 10px;"><a href="{{url_for('logout')}}"><button type="button" class="btn btn-primary">Logout</button></a></span>
+            <span style="float: right;margin-right: 10px;"><a href="{{url_for('increase_balance')}}"><button type="button" class="btn btn-primary">Add balance</button></a></span>
+    </div>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Amount of donation done</th>
+                <th scope="col">Title</th>
+                <th scope="col">Reuired Donation USD</th>
+                <th scope="col">number of charities</th>
+                <th scope="col">date</th>
+                <th scope="col">Approved or not</th>
+                <th scope="col">diseases</th>
+                <th scope="col">Patient info</th>
+            </tr>
+            </thead>
+        <tbody>
+            {%for application in applications%}
+                {% if application['application_duration']>0 %}
+                    <tr>
+                        <td>{{ application['application_id'] }}</td>
+                        <td>{{ application['amount_of_help'] }}</td>
+                        <td>{{ application['title'] }}</td>
+                        <td>{{ application['application_duration'] }}</td>
+                        <td>{{ application['numof_charity_people'] }}</td>
+                        <td>{{ application['date'] }}</td>
+                        <td>{{ application['approved'] }}</td>
+                        <td><form method="POST">
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" autocomplete="off" autofocus name="amount" placeholder="Amount to donate" required>
+                            <button type="submit" name="donate" value="{{application['application_id']}}" class="btn btn-primary">Donate</button>
+                        </form></td>
+                    </tr>
+                {%endif%}
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}

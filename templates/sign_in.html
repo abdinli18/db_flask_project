@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+        <div class="middle_buttons">
+            <h1><span style="color: white; margin-left: 37%; margin-right: 30%;">Log in</span></h1>
+            <!--<div class="middle_buttons">-->
+            <form action="/login", method="post">
+                <div class="name_login">
+                    <input autocomplete="off" autofocus name="name" placeholder="Name" type="text" required>
+                </div>
+                <div class="surname_login">
+                    <input autocomplete="off" autofocus name="password" placeholder="Password" type="text" required>
+                </div>
+                <div class="button_login">
+                    <input type="submit" name ="login"  value="login">
+                </div>
+            </form>
+            <!--<form action="/register", method="post">-->
+                <!--<a href="/register.html">-->
+                <!--------<div class = "button_sign_up">
+                    <input type="submit" name ="register" value="Do not have account? Sign up!">----->
+                <!--<button>Register2</button>-->
+                <!--</a>-->
+                <!--<span style="text-align: center; color: white;"><p><a href="/register" name="register">Dont have account? Sign up!</a></p></span> -->
+                <!--</div>
+            </form>-->
+            <div class = "button_sign_up">
+                <span style="background-color: #3090C7;margin-top: 5%; margin-left: auto; margin-right: auto; display: block; border: none;color: white; outline: none;text-align: center;"><a href="{{url_for('display_register')}}"><button type="button" >Do not have account? Sign up!</button></a></span>
+            </div>
+        </div>
+{% endblock %}

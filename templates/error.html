@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+        {{message}}
+        <div class="middle_buttons">
+                <form action="/register", method="post">
+                        <input type="submit" name ="back_register"  value="try register">
+                </form>
+        </div>
+{% endblock %}

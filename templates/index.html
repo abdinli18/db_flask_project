@@ -1,0 +1,18 @@
+{% extends "login_layout.html" %}
+
+
+{% block content %}
+        <!--<h1>Log in</h1>-->
+        
+        <div class="first_buttons">
+            <!--<form action="/login", method="">
+                <input type="submit" name ="sign_in"  value="sign in">
+            </form>
+
+            <form action="/register", method="post">
+                <input type="submit" name ="register" value="sign up">
+            </form>-->
+            <span style="float:right; margin-right: 10px;"><a href="{{url_for('login')}}"><button type="button" class="btn btn-primary">Sign in</button></a></span>
+            <span style="float:right; margin-right: 10px;"><a href="{{url_for('display_register')}}"><button type="button" class="btn btn-primary">Sign up</button></a></span>
+        </div>
+{% endblock content %}

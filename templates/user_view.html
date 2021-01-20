@@ -1,0 +1,35 @@
+{% extends "login_layout.html" %}
+
+{% block content %}
+<!--<form action="/logout", method="post">
+    <input type="submit" name ="logout" value="Logout">
+</form>-->
+<span style="float: right;margin-right: 10px;"><a href="{{url_for('logout')}}"><button type="button" class="btn btn-primary">Logout</button></a></span>
+<table class="table">
+    <thead class="table-dark">
+      <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Type</th>
+          <th scope="col">Country</th>
+          <th scope="col">Button</th>
+      </tr>
+    </thead>
+    <tbody>
+        {%for user in users%}
+            {% if user['type']=="patient" %}
+                <tr>
+                    <td>{{ user['id'] }}</td>
+                    <td>{{ user['name'] }}</td>
+                    <td>{{ user['type'] }}</td>
+                    <td>{{ user['country'] }}</td>
+                    <form method="post">
+                        <td><button type="submit" name="approve" value="{{ user['id'] }}" class="btn btn-primary">approve</button></td>
+                    </form>
+                </tr>
+
+            {% endif %}
+        {% endfor %}
+    </tbody>
+  </table>
+{% endblock content %}
