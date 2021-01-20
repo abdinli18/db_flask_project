@@ -5,6 +5,7 @@ cachelib==0.1.1
 certifi==2019.11.28
 chardet==3.0.4
 Click==7.0
+cloud-init==20.2
 colorama==0.4.3
 command-not-found==0.3
 configobj==5.0.6
@@ -17,6 +18,7 @@ entrypoints==0.3
 Flask==1.1.1
 Flask-Login==0.5.0
 Flask-Session==0.3.2
+gunicorn==20.0.4
 httplib2==0.14.0
 hyperlink==19.0.0
 idna==2.8
@@ -70,4 +72,4 @@ wadllib==1.3.3
 Werkzeug==0.16.1
 zipp==1.0.0
 zope.interface==4.7.1
-gunicorn==20.0.4
+gunicorn>=19.9
